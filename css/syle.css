@@ -1,0 +1,74 @@
+body {
+
+}
+
+#main {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-rows: 200px 200px auto 200px;
+	    grid-template-rows: 200px 200px auto 200px;
+	-ms-grid-columns: 100px auto auto 100px;
+	    grid-template-columns: 100px auto auto 100px;       grid-template-areas: 
+															"top top top top"
+															"left main main right"
+															"left main main right"
+															"left score score right";
+}
+
+.scores {
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	background: gray;
+	margin: auto;
+	font-size: 100px;
+}
+
+#score {
+	z-index: 
+	-ms-grid-row;
+	-ms-grid-row: 4;
+	-ms-grid-column: 2;
+	-ms-grid-column-span: 2;
+	grid-area: score;
+	display: -ms-grid;
+	display: grid;
+                                    -ms-grid-rows: auto;
+                                        grid-template-rows: auto;       
+                                    -ms-grid-columns: auto auto auto;       
+                                        grid-template-columns: auto auto auto;         grid-template-areas: 
+														"leftScore middle rightScore"
+}
+
+.scores:hover {
+	cursor: pointer;
+}
+
+#leftScore {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+	grid-area: leftScore;
+
+}
+
+#rightScore {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-row: 1;
+	-ms-grid-column: 3;
+	grid-area: rightScore;
+}
+
+.scoreButtons {
+	display: inline-block;
+	width: auto;
+	margin: auto;
+	text-align: center;
+}
+
+.whosServing {
+	width: 150px;
+	margin: auto;
+}
